@@ -205,7 +205,6 @@ namespace Predibase
             global::Predibase.DeploymentConfig? config = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Predibase.UpdateDeploymentRequest
             {
                 Description = description,
