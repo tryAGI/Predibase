@@ -283,6 +283,7 @@ namespace Predibase
             global::Predibase.GenerateParameters? parameters = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Predibase.GenerateRequest
             {
                 Inputs = inputs,

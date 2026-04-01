@@ -313,6 +313,7 @@ namespace Predibase
             string? adapterSource = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Predibase.ChatCompletionRequest
             {
                 Model = model,
