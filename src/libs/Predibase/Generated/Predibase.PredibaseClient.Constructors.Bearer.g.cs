@@ -6,6 +6,7 @@ namespace Predibase
     public sealed partial class PredibaseClient
     {
         /// <inheritdoc cref="PredibaseClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::Predibase.EndPointAuthorization}?, bool)"/>
+
         public PredibaseClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,

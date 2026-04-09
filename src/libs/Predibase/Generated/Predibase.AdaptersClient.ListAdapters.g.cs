@@ -5,6 +5,25 @@ namespace Predibase
 {
     public partial class AdaptersClient
     {
+
+
+        private static readonly global::Predibase.EndPointSecurityRequirement s_ListAdaptersSecurityRequirement0 =
+            new global::Predibase.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Predibase.EndPointAuthorizationRequirement[]
+                {                    new global::Predibase.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Predibase.EndPointSecurityRequirement[] s_ListAdaptersSecurityRequirements =
+            new global::Predibase.EndPointSecurityRequirement[]
+            {                s_ListAdaptersSecurityRequirement0,
+            };
         partial void PrepareListAdaptersArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string repoName);
@@ -38,9 +57,15 @@ namespace Predibase
                 httpClient: HttpClient,
                 repoName: ref repoName);
 
+
+            var __authorizations = global::Predibase.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ListAdaptersSecurityRequirements,
+                operationName: "ListAdaptersAsync");
+
             var __pathBuilder = new global::Predibase.PathBuilder(
                 path: $"/repos/{repoName}/adapters",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -50,7 +75,7 @@ namespace Predibase
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

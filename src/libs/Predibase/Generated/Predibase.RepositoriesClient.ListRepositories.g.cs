@@ -5,6 +5,25 @@ namespace Predibase
 {
     public partial class RepositoriesClient
     {
+
+
+        private static readonly global::Predibase.EndPointSecurityRequirement s_ListRepositoriesSecurityRequirement0 =
+            new global::Predibase.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Predibase.EndPointAuthorizationRequirement[]
+                {                    new global::Predibase.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Predibase.EndPointSecurityRequirement[] s_ListRepositoriesSecurityRequirements =
+            new global::Predibase.EndPointSecurityRequirement[]
+            {                s_ListRepositoriesSecurityRequirement0,
+            };
         partial void PrepareListRepositoriesArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? limit);
@@ -40,12 +59,18 @@ namespace Predibase
                 httpClient: HttpClient,
                 limit: ref limit);
 
+
+            var __authorizations = global::Predibase.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ListRepositoriesSecurityRequirements,
+                operationName: "ListRepositoriesAsync");
+
             var __pathBuilder = new global::Predibase.PathBuilder(
                 path: "/repos",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("limit", limit?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -55,7 +80,7 @@ namespace Predibase
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
