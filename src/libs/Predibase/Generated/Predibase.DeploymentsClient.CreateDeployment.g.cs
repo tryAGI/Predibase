@@ -5,6 +5,25 @@ namespace Predibase
 {
     public partial class DeploymentsClient
     {
+
+
+        private static readonly global::Predibase.EndPointSecurityRequirement s_CreateDeploymentSecurityRequirement0 =
+            new global::Predibase.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Predibase.EndPointAuthorizationRequirement[]
+                {                    new global::Predibase.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Predibase.EndPointSecurityRequirement[] s_CreateDeploymentSecurityRequirements =
+            new global::Predibase.EndPointSecurityRequirement[]
+            {                s_CreateDeploymentSecurityRequirement0,
+            };
         partial void PrepareCreateDeploymentArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Predibase.CreateDeploymentRequest request);
@@ -41,9 +60,15 @@ namespace Predibase
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Predibase.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateDeploymentSecurityRequirements,
+                operationName: "CreateDeploymentAsync");
+
             var __pathBuilder = new global::Predibase.PathBuilder(
                 path: "/deployments",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -53,7 +78,7 @@ namespace Predibase
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
