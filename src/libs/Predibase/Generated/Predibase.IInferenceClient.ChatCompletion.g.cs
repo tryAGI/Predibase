@@ -11,12 +11,14 @@ namespace Predibase
         /// </summary>
         /// <param name="deploymentName"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Predibase.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Predibase.ChatCompletionResponse> ChatCompletionAsync(
             string deploymentName,
 
             global::Predibase.ChatCompletionRequest request,
+            global::Predibase.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Chat Completion<br/>
@@ -53,6 +55,7 @@ namespace Predibase
         /// <param name="adapterSource">
         /// Source of the adapter (pbase, hub, s3).
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Predibase.ChatCompletionResponse> ChatCompletionAsync(
@@ -66,6 +69,7 @@ namespace Predibase
             global::System.Collections.Generic.IList<string>? stop = default,
             bool? stream = default,
             string? adapterSource = default,
+            global::Predibase.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

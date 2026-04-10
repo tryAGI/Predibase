@@ -11,11 +11,13 @@ namespace Predibase
         /// Use the job ID to poll for status.
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Predibase.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Predibase.FinetuningJob> CreateFinetuningJobAsync(
 
             global::Predibase.CreateFinetuningJobRequest request,
+            global::Predibase.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Fine-tuning Job<br/>
@@ -35,6 +37,7 @@ namespace Predibase
         /// <param name="description">
         /// Description for the fine-tuning job.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Predibase.FinetuningJob> CreateFinetuningJobAsync(
@@ -42,6 +45,7 @@ namespace Predibase
             string dataset,
             string repo,
             string? description = default,
+            global::Predibase.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
