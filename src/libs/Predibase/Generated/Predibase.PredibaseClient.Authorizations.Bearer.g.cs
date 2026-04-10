@@ -25,6 +25,7 @@ namespace Predibase
             Authorizations.Add(new global::Predibase.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "HttpBearer",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

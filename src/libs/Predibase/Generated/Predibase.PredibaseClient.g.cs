@@ -41,6 +41,9 @@ namespace Predibase
 #if DEBUG
             = true;
 #endif
+
+        /// <inheritdoc/>
+        public global::Predibase.AutoSDKClientOptions Options { get; }
         /// <summary>
         /// 
         /// </summary>
@@ -50,7 +53,7 @@ namespace Predibase
         /// <summary>
         /// 
         /// </summary>
-        public AdaptersClient Adapters => new AdaptersClient(HttpClient, authorizations: Authorizations)
+        public AdaptersClient Adapters => new AdaptersClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -59,7 +62,7 @@ namespace Predibase
         /// <summary>
         /// 
         /// </summary>
-        public DatasetsClient Datasets => new DatasetsClient(HttpClient, authorizations: Authorizations)
+        public DatasetsClient Datasets => new DatasetsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -68,7 +71,7 @@ namespace Predibase
         /// <summary>
         /// 
         /// </summary>
-        public DeploymentsClient Deployments => new DeploymentsClient(HttpClient, authorizations: Authorizations)
+        public DeploymentsClient Deployments => new DeploymentsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -77,7 +80,7 @@ namespace Predibase
         /// <summary>
         /// 
         /// </summary>
-        public FineTuningClient FineTuning => new FineTuningClient(HttpClient, authorizations: Authorizations)
+        public FineTuningClient FineTuning => new FineTuningClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -86,7 +89,7 @@ namespace Predibase
         /// <summary>
         /// 
         /// </summary>
-        public InferenceClient Inference => new InferenceClient(HttpClient, authorizations: Authorizations)
+        public InferenceClient Inference => new InferenceClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -95,7 +98,7 @@ namespace Predibase
         /// <summary>
         /// 
         /// </summary>
-        public RepositoriesClient Repositories => new RepositoriesClient(HttpClient, authorizations: Authorizations)
+        public RepositoriesClient Repositories => new RepositoriesClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -114,11 +117,37 @@ namespace Predibase
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
             global::System.Collections.Generic.List<global::Predibase.EndPointAuthorization>? authorizations = null,
+            bool disposeHttpClient = true) : this(
+                httpClient,
+                baseUri,
+                authorizations,
+                options: null,
+                disposeHttpClient: disposeHttpClient)
+        {
+        }
+
+        /// <summary>
+        /// Creates a new instance of the PredibaseClient.
+        /// If no httpClient is provided, a new one will be created.
+        /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
+        /// </summary>
+        /// <param name="httpClient">The HttpClient instance. If not provided, a new one will be created.</param>
+        /// <param name="baseUri">The base URL for the API. If not provided, the default baseUri from OpenAPI spec will be used.</param>
+        /// <param name="authorizations">The authorizations to use for the requests.</param>
+        /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
+        /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
+        public PredibaseClient(
+            global::System.Net.Http.HttpClient? httpClient = null,
+            global::System.Uri? baseUri = null,
+            global::System.Collections.Generic.List<global::Predibase.EndPointAuthorization>? authorizations = null,
+            global::Predibase.AutoSDKClientOptions? options = null,
             bool disposeHttpClient = true)
         {
+
             HttpClient = httpClient ?? new global::System.Net.Http.HttpClient();
             HttpClient.BaseAddress ??= baseUri ?? new global::System.Uri(DefaultBaseUrl);
             Authorizations = authorizations ?? new global::System.Collections.Generic.List<global::Predibase.EndPointAuthorization>();
+            Options = options ?? new global::Predibase.AutoSDKClientOptions();
             _disposeHttpClient = disposeHttpClient;
 
             Initialized(HttpClient);
