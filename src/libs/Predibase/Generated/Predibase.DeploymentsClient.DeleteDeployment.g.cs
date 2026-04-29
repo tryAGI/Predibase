@@ -120,7 +120,7 @@ namespace Predibase
                 PrepareDeleteDeploymentRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    deploymentName: deploymentName);
+                    deploymentName: deploymentName!);
 
                 return __httpRequest;
             }
