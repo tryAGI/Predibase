@@ -125,7 +125,7 @@ namespace Predibase
                 PrepareGetRepositoryRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    repoName: repoName);
+                    repoName: repoName!);
 
                 return __httpRequest;
             }

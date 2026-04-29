@@ -125,8 +125,8 @@ namespace Predibase
                 PrepareCancelAdapterRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    repoName: repoName,
-                    version: version);
+                    repoName: repoName!,
+                    version: version!);
 
                 return __httpRequest;
             }

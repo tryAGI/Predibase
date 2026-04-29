@@ -140,7 +140,7 @@ namespace Predibase
                 PrepareChatCompletionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    deploymentName: deploymentName,
+                    deploymentName: deploymentName!,
                     request: request);
 
                 return __httpRequest;
