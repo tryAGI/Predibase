@@ -26,6 +26,22 @@ namespace Predibase
         /// Generates tokens and waits for completion. Supports adapter switching.
         /// </summary>
         /// <param name="deploymentName"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Predibase.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Predibase.AutoSDKHttpResponse<global::Predibase.GenerateResponse>> GenerateAsResponseAsync(
+            string deploymentName,
+
+            global::Predibase.GenerateRequest request,
+            global::Predibase.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Generate<br/>
+        /// LoRAX native generate endpoint for a specific deployment.<br/>
+        /// Generates tokens and waits for completion. Supports adapter switching.
+        /// </summary>
+        /// <param name="deploymentName"></param>
         /// <param name="inputs">
         /// The prompt text.
         /// </param>
