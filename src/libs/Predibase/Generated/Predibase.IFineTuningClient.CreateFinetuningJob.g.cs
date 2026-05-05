@@ -25,6 +25,21 @@ namespace Predibase
         /// that starts training and returns immediately with the job details.<br/>
         /// Use the job ID to poll for status.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Predibase.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Predibase.AutoSDKHttpResponse<global::Predibase.FinetuningJob>> CreateFinetuningJobAsResponseAsync(
+
+            global::Predibase.CreateFinetuningJobRequest request,
+            global::Predibase.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create Fine-tuning Job<br/>
+        /// Create a new LoRA fine-tuning job. This is an asynchronous operation<br/>
+        /// that starts training and returns immediately with the job details.<br/>
+        /// Use the job ID to poll for status.
+        /// </summary>
         /// <param name="config">
         /// Configuration for a fine-tuning job.
         /// </param>
