@@ -48,5 +48,6 @@ namespace Predibase
         public ChatCompletionMessage()
         {
         }
+
     }
 }

@@ -190,5 +190,6 @@ namespace Predibase
         public GenerateParameters()
         {
         }
+
     }
 }

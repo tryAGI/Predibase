@@ -52,5 +52,6 @@ namespace Predibase
         public ErrorResponse()
         {
         }
+
     }
 }
