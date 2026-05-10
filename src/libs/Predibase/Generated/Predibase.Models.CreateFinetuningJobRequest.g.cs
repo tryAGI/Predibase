@@ -77,5 +77,6 @@ namespace Predibase
         public CreateFinetuningJobRequest()
         {
         }
+
     }
 }

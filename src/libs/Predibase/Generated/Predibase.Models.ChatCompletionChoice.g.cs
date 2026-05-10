@@ -57,5 +57,6 @@ namespace Predibase
         public ChatCompletionChoice()
         {
         }
+
     }
 }

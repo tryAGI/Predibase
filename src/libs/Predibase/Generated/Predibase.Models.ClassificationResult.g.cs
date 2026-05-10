@@ -72,5 +72,6 @@ namespace Predibase
         public ClassificationResult()
         {
         }
+
     }
 }
