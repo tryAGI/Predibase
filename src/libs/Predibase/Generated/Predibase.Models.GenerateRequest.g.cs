@@ -53,5 +53,6 @@ namespace Predibase
         public GenerateRequest()
         {
         }
+
     }
 }

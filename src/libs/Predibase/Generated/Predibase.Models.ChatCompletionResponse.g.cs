@@ -95,5 +95,6 @@ namespace Predibase
         public ChatCompletionResponse()
         {
         }
+
     }
 }

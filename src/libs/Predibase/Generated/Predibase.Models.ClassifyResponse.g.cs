@@ -86,5 +86,6 @@ namespace Predibase
         public ClassifyResponse()
         {
         }
+
     }
 }

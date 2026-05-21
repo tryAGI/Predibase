@@ -134,5 +134,6 @@ namespace Predibase
         public ChatCompletionRequest()
         {
         }
+
     }
 }

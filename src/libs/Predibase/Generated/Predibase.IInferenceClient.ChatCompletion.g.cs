@@ -26,6 +26,22 @@ namespace Predibase
         /// Supports both base model and fine-tuned adapter inference.
         /// </summary>
         /// <param name="deploymentName"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Predibase.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Predibase.AutoSDKHttpResponse<global::Predibase.ChatCompletionResponse>> ChatCompletionAsResponseAsync(
+            string deploymentName,
+
+            global::Predibase.ChatCompletionRequest request,
+            global::Predibase.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Chat Completion<br/>
+        /// OpenAI-compatible chat completion endpoint for a specific deployment.<br/>
+        /// Supports both base model and fine-tuned adapter inference.
+        /// </summary>
+        /// <param name="deploymentName"></param>
         /// <param name="model">
         /// Adapter model identifier (e.g., repo_name/version).
         /// </param>

@@ -21,6 +21,19 @@ namespace Predibase
         /// Create Repository<br/>
         /// Create a new adapter repository for organizing fine-tuned adapters.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Predibase.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Predibase.AutoSDKHttpResponse<global::Predibase.Repository>> CreateRepositoryAsResponseAsync(
+
+            global::Predibase.CreateRepositoryRequest request,
+            global::Predibase.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create Repository<br/>
+        /// Create a new adapter repository for organizing fine-tuned adapters.
+        /// </summary>
         /// <param name="name">
         /// Name for the repository.
         /// </param>

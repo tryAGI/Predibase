@@ -200,5 +200,6 @@ namespace Predibase
         public DeploymentConfig()
         {
         }
+
     }
 }

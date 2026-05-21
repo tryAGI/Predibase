@@ -120,5 +120,6 @@ namespace Predibase
         public CompletionRequest()
         {
         }
+
     }
 }

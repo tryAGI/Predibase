@@ -41,5 +41,6 @@ namespace Predibase
         public HealthResponse()
         {
         }
+
     }
 }

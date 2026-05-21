@@ -119,5 +119,6 @@ namespace Predibase
         public Adapter()
         {
         }
+
     }
 }

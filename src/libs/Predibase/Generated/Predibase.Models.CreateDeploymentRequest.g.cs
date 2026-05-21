@@ -65,5 +65,6 @@ namespace Predibase
         public CreateDeploymentRequest()
         {
         }
+
     }
 }

@@ -24,6 +24,21 @@ namespace Predibase
         /// OpenAI-compatible text completion endpoint for a specific deployment.
         /// </summary>
         /// <param name="deploymentName"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Predibase.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Predibase.AutoSDKHttpResponse<global::Predibase.CompletionResponse>> CompletionAsResponseAsync(
+            string deploymentName,
+
+            global::Predibase.CompletionRequest request,
+            global::Predibase.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Completion<br/>
+        /// OpenAI-compatible text completion endpoint for a specific deployment.
+        /// </summary>
+        /// <param name="deploymentName"></param>
         /// <param name="model">
         /// Adapter model identifier.
         /// </param>
