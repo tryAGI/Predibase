@@ -9,27 +9,27 @@ namespace Predibase
     public enum AdapterStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Archived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cancelled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pending,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ready,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Training,
     }

@@ -4,7 +4,7 @@
 namespace Predibase
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateRepositoryRequest
     {

@@ -9,15 +9,15 @@ namespace Predibase
     public enum GenerationDetailsFinishReason
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EosToken,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Length,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StopSequence,
     }

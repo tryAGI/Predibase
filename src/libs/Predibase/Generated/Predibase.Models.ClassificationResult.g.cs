@@ -4,12 +4,12 @@
 namespace Predibase
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ClassificationResult
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("index")]
         public int? Index { get; set; }

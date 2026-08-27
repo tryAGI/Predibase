@@ -9,15 +9,15 @@ namespace Predibase
     public enum DeploymentConfigQuantization
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BitsandbytesNf4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Fp8,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         None,
     }

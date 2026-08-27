@@ -20,7 +20,7 @@ namespace Predibase.JsonConverters
                     {
                         return global::Predibase.AdapterStatusExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

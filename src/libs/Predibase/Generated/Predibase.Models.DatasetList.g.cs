@@ -4,12 +4,12 @@
 namespace Predibase
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DatasetList
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         public global::System.Collections.Generic.IList<global::Predibase.Dataset>? Data { get; set; }
