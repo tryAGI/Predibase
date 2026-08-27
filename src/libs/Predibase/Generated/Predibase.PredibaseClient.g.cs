@@ -48,7 +48,7 @@ namespace Predibase
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Predibase.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -58,7 +58,7 @@ namespace Predibase
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AdaptersClient Adapters => new AdaptersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -67,7 +67,7 @@ namespace Predibase
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DatasetsClient Datasets => new DatasetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -76,7 +76,7 @@ namespace Predibase
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DeploymentsClient Deployments => new DeploymentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -85,7 +85,7 @@ namespace Predibase
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FineTuningClient FineTuning => new FineTuningClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -94,7 +94,7 @@ namespace Predibase
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InferenceClient Inference => new InferenceClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -103,7 +103,7 @@ namespace Predibase
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RepositoriesClient Repositories => new RepositoriesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

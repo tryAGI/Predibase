@@ -135,7 +135,7 @@ namespace Predibase
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Predibase.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

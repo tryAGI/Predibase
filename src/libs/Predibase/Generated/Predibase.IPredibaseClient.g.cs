@@ -50,38 +50,38 @@ namespace Predibase
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AdaptersClient Adapters { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DatasetsClient Datasets { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DeploymentsClient Deployments { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FineTuningClient FineTuning { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public InferenceClient Inference { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public RepositoriesClient Repositories { get; }
 

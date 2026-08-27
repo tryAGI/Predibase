@@ -27,19 +27,19 @@ namespace Predibase
         public string? ModelDeviceType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("max_concurrent_requests")]
         public int? MaxConcurrentRequests { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("max_input_length")]
         public int? MaxInputLength { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("max_total_tokens")]
         public int? MaxTotalTokens { get; set; }
