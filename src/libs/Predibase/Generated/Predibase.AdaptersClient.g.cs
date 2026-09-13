@@ -34,7 +34,7 @@ namespace Predibase
         /// <inheritdoc/>
         public global::Predibase.AutoSDKClientOptions Options { get; }
 
-        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Predibase.SourceGenerationContext.Default);
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Predibase.AdaptersSourceGenerationContext.Default);
 
         /// <summary>
         ///
